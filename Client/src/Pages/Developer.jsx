@@ -43,7 +43,7 @@ function Developer() {
                             className="text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 bg-clip-text text-transparent drop-shadow-md tracking-tight mb-8 transition-transform duration-300 hover:scale-110 hover:text-blue-700"
                             style={{ cursor: 'pointer' }}
                         >
-                            <span className="font-bold text-black">OUR</span> <span className="font-extrabold uppercase">TEAM</span>
+                            <span className="font-extrabold text-gray-800">OUR</span> <span className=" font-extrabold uppercase">TEAM</span>
                         </h2>
                         <div className="flex flex-row gap-8 justify-center">
                             {team.map((member, idx) => (

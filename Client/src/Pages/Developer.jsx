@@ -31,17 +31,19 @@ function Developer() {
 
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-blue-600 bg-cover bg-center flex flex-col relative">
+            <div className="min-h-screen bg-gradient-to-br from-blue-700 via-blue-500 to-blue-800 bg-cover bg-center flex flex-col relative">
+                {/* Thick blue gradient line below the header */}
+                <div className="absolute top-24 left-0 w-full h-3 bg-gradient-to-r from-blue-700 via-blue-500 to-blue-800 shadow-lg z-20 rounded"></div>
                 <div className="absolute top-8 left-10">
                     <h1 className="text-4xl font-extrabold text-white drop-shadow-lg tracking-tight">Developer</h1>
                 </div>
                 <div className="flex flex-1 items-center justify-center">
                     <div className="bg-gradient-to-br from-white via-gray-100 to-gray-300 rounded-0xl shadow-2xl px-8 py-8 flex flex-col items-center w-full max-w-10xl  mx-auto">
                         <h2
-                            className="text-3xl font-extrabold bg-gradient-to-r from-blue-500 via-blue-500 to-blue-500 bg-clip-text text-transparent drop-shadow-md tracking-tight mb-8 transition-transform duration-300 hover:scale-110 hover:text-blue-700"
+                            className="text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 bg-clip-text text-transparent drop-shadow-md tracking-tight mb-8 transition-transform duration-300 hover:scale-110 hover:text-blue-700"
                             style={{ cursor: 'pointer' }}
                         >
-                            Our Team
+                            <span className="font-bold text-black">OUR</span> <span className="font-extrabold uppercase">TEAM</span>
                         </h2>
                         <div className="flex flex-row gap-8 justify-center">
                             {team.map((member, idx) => (
@@ -75,17 +77,17 @@ function Developer() {
                     </div>
                 </div>
                 <div className="fixed right-8 bottom-24 flex flex-col items-center z-50">
-    <span className="mb-1 text-xs font-semibold text-white bg-blue-900 px-2 py-1 rounded shadow">View on GitHub</span>
-    <a
-        href="https://github.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-white rounded-full p-3 shadow hover:bg-gray-100 transition flex items-center"
-        aria-label="GitHub"
-    >
-        <FaGithub size={32} className="text-gray-800" />
-    </a>
-</div>
+                    <span className="mb-1 text-xs font-semibold text-white bg-blue-900 px-2 py-1 rounded shadow">View on GitHub</span>
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white rounded-full p-3 shadow hover:bg-gray-100 transition flex items-center"
+                        aria-label="GitHub"
+                    >
+                        <FaGithub size={32} className="text-gray-800" />
+                    </a>
+                </div>
                 {/* Footer */}
                 <footer className="w-full bg-blue-900 text-white py-4 mt-8 text-center relative">
                     <div className="max-w-4xl mx-auto flex flex-col items-center">

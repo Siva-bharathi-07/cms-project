@@ -1,10 +1,10 @@
 import "./App.css";
-import Home from "./Pages/Home";
+import Assessment from "./Pages/assessment";
 
 function App() {
   return (
     <>
-      <Home />
+      <Assessment />
     </>
   );
 }

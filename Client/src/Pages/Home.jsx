@@ -28,8 +28,26 @@ export default function Home() {
           </button>
         </div>
       </header>
-      <section>
-        <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+      <section className="relative min-h-[60vh] flex flex-col justify-center items-center bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div className="mt-24 text-center">
+          <h5 className="text-blue-700 font-semibold text-lg mb-2">
+            Top Rated Program <span className="text-yellow-400">4.7/5 ★</span>
+          </h5>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 drop-shadow-lg">
+            Build a <span className="text-blue-600">successful career</span>
+          </h2>
+          <p className="text-lg text-gray-600 max-w-xl mx-auto mb-8">
+            Join our platform to access top courses, and real-world assessments
+            to accelerate your learning journey.
+          </p>
+          <div className="flex justify-center gap-6">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold shadow transition-all duration-200">
+              Get Started
+            </button>
+          </div>
+        </div>
+
+        <div className="fixed top-[60%] right-8 transform -translate-y-1/2 flex flex-col gap-4 z-50">
           <a
             href="https://wa.me/8489148790"
             target="_blank"
@@ -48,6 +66,11 @@ export default function Home() {
           </a>
         </div>
       </section>
+      <footer className="fixed bottom-0 left-0 w-full bg-blue-900 text-blue-100 py-1 px-4 rounded-t-xl shadow-inner flex items-center justify-center text-xs z-40">
+        <div className="font-semibold tracking-wide text-center w-full">
+          © {new Date().getFullYear()} Learning Platform. All rights reserved.
+        </div>
+      </footer>
     </>
   );
 }

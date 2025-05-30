@@ -270,6 +270,8 @@ function Assessment() {
     };
 
     return (
+
+        
         <div className="min-h-screen w-full bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex">
             {/* Heading on left */}
             <div className="w-1/3 p-10">

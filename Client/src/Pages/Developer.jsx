@@ -31,9 +31,9 @@ function Developer() {
 
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-br from-blue-700 via-blue-500 to-blue-800 bg-cover bg-center flex flex-col relative">
+            <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900 bg-cover bg-center flex flex-col relative">
                 {/* Thick blue gradient line below the header */}
-                <div className="absolute top-24 left-0 w-full h-3 bg-gradient-to-r from-blue-700 via-blue-500 to-blue-800 shadow-lg z-20 rounded"></div>
+                <div className="absolute top-24 left-0 w-full h-3 bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 shadow-lg z-20 rounded"></div>
                 <div className="absolute top-8 left-10">
                     <h1 className="text-4xl font-extrabold text-white drop-shadow-lg tracking-tight">Developer</h1>
                 </div>
@@ -60,7 +60,6 @@ function Developer() {
                                         <div className="mb-1 font-semibold text-sm leading-tight tracking-tight">{member.degree}</div>
                                         <div className="font-bold text-base leading-tight">{member.role}</div>
                                     </div>
-                                    {/* LinkedIn Icon */}
                                     <a
                                         className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow hover:bg-blue-100 transition"
                                         href={member.linkedin}
@@ -76,29 +75,29 @@ function Developer() {
                         </div>
                     </div>
                 </div>
-                <div className="fixed right-8 bottom-24 flex flex-col items-center z-50">
-                    <span className="mb-1 text-xs font-semibold text-white bg-blue-900 px-2 py-1 rounded shadow">View on GitHub</span>
+                <div class="gihub-corner">
                     <a
                         href="https://github.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white rounded-full p-3 shadow hover:bg-gray-100 transition flex items-center"
-                        aria-label="GitHub"
+                        className="fixed bottom-16 right-8 flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300 opacity-70 hover:opacity-100 hover:translate-y-[-8px] z-50"
+                        style={{ minWidth: 90, cursor: 'pointer' }}
+                        aria-label="View on GitHub"
                     >
-                        <FaGithub size={32} className="text-gray-800" />
+                        <FaGithub size={24} />
+                        <span className="font-semibold text-base">GitHub</span>
                     </a>
                 </div>
                 {/* Footer */}
-                <footer className="w-full bg-blue-900 text-white py-4 mt-8 text-center relative">
-                    <div className="max-w-4xl mx-auto flex flex-col items-center">
-                        <span className="font-semibold">CMS Project &copy; {new Date().getFullYear()}</span>
-                        <span className="text-sm mt-1">Developed by our passionate team of Computer Science Engineers</span>
+                <footer className="w-full bg-blue-900 text-white py-1 mt-1 text-center relative">
+                    <div className="max-w-1xl mx-auto flex flex-col items-center">
+                        <span className="text-sm mt-1">© 2025 Learning Platform. All rights reserved.</span>
                     </div>
                 </footer>
             </div>
         </>
     );
 }
-{/* GitHub icon with text above the footer box, right side */}
+
 
 export default Developer;

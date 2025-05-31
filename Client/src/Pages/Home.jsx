@@ -9,26 +9,27 @@ export default function Home() {
           Learning Platform
         </div>
         <nav className="flex gap-10">
-          {["Home", "About", "Courses", <Link to="/Assessment" >
-        Assessment</Link> , "Developer Pages"].map(
-            (item) => (
-              <span
-                key={item}
-                className="font-semibold text-lg px-3 py-1 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer"
-              >
-                {item}
-              </span>
-            )
-          )}
+          {[
+            "Home",
+            "About",
+            "Courses",
+            <Link to="/Assessment">Assessment</Link>,
+            "Developer Pages",
+          ].map((item) => (
+            <span
+              key={item}
+              className="font-semibold text-lg px-3 py-1 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer"
+            >
+              {item}
+            </span>
+          ))}
         </nav>
         <div className="flex gap-4">
           <button className="px-5 py-2 rounded-lg font-medium bg-transparent border border-blue-400 text-blue-300 hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer">
-            <Link to="/Login" >
-         Sign In</Link>
+            <Link to="/Login">Sign In</Link>
           </button>
           <button className="px-5 py-2 rounded-lg font-medium bg-blue-500 text-white hover:bg-blue-700 transition-all duration-200 shadow cursor-pointer">
-             <Link to="/Login" >
-         Sign Up</Link>
+            <Link to="/Login">Sign Up</Link>
           </button>
         </div>
       </header>
@@ -46,7 +47,7 @@ export default function Home() {
           </p>
           <div className="flex justify-center gap-6">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold shadow transition-all duration-200">
-              Get Started
+              <Link to="/Login">Start Learning</Link>
             </button>
           </div>
         </div>

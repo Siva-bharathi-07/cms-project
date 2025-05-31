@@ -29,7 +29,7 @@ export default function Home() {
             <Link to="/Login">Sign In</Link>
           </button>
           <button className="px-5 py-2 rounded-lg font-medium bg-blue-500 text-white hover:bg-blue-700 transition-all duration-200 shadow cursor-pointer">
-            <Link to="/Login">Sign Up</Link>
+            <Link to="/Signup">Sign Up</Link>
           </button>
         </div>
       </header>

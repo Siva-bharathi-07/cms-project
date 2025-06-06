@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { FaLinkedin } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const team = [
     {
@@ -31,73 +30,77 @@ function Developer() {
 
     return (
         <>
-            <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900 bg-cover bg-center flex flex-col relative">
-                {/* Thick blue gradient line below the header */}
-                <div className="absolute top-24 left-0 w-full h-3 bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 shadow-lg z-20 rounded"></div>
-                <div className="absolute top-8 left-10">
-                    <h1 className="text-4xl font-extrabold text-white drop-shadow-lg tracking-tight">Developer</h1>
-                </div>
-                <div className="flex flex-1 items-center justify-center">
-                    <div className="bg-gradient-to-br from-white via-gray-100 to-gray-300 rounded-0xl shadow-2xl px-8 py-8 flex flex-col items-center w-full max-w-10xl  mx-auto">
-                        <h2
-                            className="text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-blue-600 to-blue-600 bg-clip-text text-transparent drop-shadow-md tracking-tight mb-8 transition-transform duration-300 hover:scale-110 hover:text-blue-700"
-                            style={{ cursor: 'pointer' }}
-                        >
-                            <span className="font-extrabold text-gray-800">OUR</span> <span className=" font-extrabold uppercase">TEAM</span>
-                        </h2>
-                        <div className="flex flex-row gap-8 justify-center">
-                            {team.map((member, idx) => (
-                                <div key={member.name} className="relative flex flex-col items-center rounded-lg p-6 w-72 h-80 shadow cursor-pointer transition-transform duration-200 hover:scale-105 hover:z-10 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-400 text-white hover:shadow-2xl">
-                                    <img
-                                        src={member.img}
-                                        alt={member.name}
-                                        className="w-25 h-24 rounded-full object-cover mb-4 border-4 border-white shadow"
-                                    />
-                                    <div className="flex flex-col items-center space-y-2">
-                                        <div className="font-bold text-base leading-tight">Name</div>
-                                        <div className="mb-1 font-extrabold text-lg leading-tight tracking-tight">{member.name}</div>
-                                        <div className="font-bold text-base leading-tight">Degree</div>
-                                        <div className="mb-1 font-semibold text-sm leading-tight tracking-tight">{member.degree}</div>
-                                        <div className="font-bold text-base leading-tight">{member.role}</div>
+            <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900 flex flex-col relative">
+                {/* Header */}
+                <header className="py-10 px-8 flex flex-col items-center relative">
+                    <h1 className="text-5xl font-black text-white drop-shadow-lg tracking-tight mb-2">
+                        Developer
+                    </h1>
+                    <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-600 rounded-full mt-2 mb-4"></div>
+                    <p className="text-gray-200 text-lg font-medium">Meet our passionate development team</p>
+                </header>
+
+                {/* Team Section */}
+                <main className="flex-1 flex items-center justify-center px-4 py-8">
+                    <div className="w-full max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                        {team.map((member, idx) => (
+                            <div
+                                key={member.name}
+                                className="relative flex flex-col items-center rounded-2xl p-8 bg-white/90 shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300 group"
+                            >
+                                <img
+                                    src={member.img}
+                                    alt={member.name}
+                                    className="w-28 h-28 rounded-full object-cover mb-4 border-4 border-blue-500 shadow-lg group-hover:scale-105 transition-transform duration-300"
+                                />
+                                <div className="flex flex-col items-center space-y-1">
+                                    <div className="font-semibold text-gray-700 text-sm">Name</div>
+                                    <div className="font-extrabold text-lg text-blue-800 tracking-tight">{member.name}</div>
+                                    <div className="font-semibold text-gray-700 text-sm mt-2">Degree</div>
+                                    <div className="font-medium text-gray-600 text-xs text-center">{member.degree}</div>
+                                    <div className="mt-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-bold text-xs uppercase tracking-wider shadow-sm">
+                                        {member.role}
                                     </div>
-                                    <a
-                                        className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow hover:bg-blue-100 transition"
-                                        href={member.linkedin}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        aria-label={`Show LinkedIn for ${member.name}`}
-                                        onClick={e => e.stopPropagation()}
-                                    >
-                                        <FaLinkedin size={28} className="text-blue-700" />
-                                    </a>
                                 </div>
-                            ))}
-                        </div>
+                                <a
+                                    className="absolute bottom-4 right-4 bg-white rounded-full p-2 shadow hover:bg-blue-100 transition"
+                                    href={member.linkedin}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Show LinkedIn for ${member.name}`}
+                                    onClick={e => e.stopPropagation()}
+                                >
+                                    <FaLinkedin size={28} className="text-blue-700" />
+                                </a>
+                            </div>
+                        ))}
                     </div>
-                </div>
-                <div class="gihub-corner">
+                </main>
+
+                {/* GitHub Corner */}
+                <div className="fixed bottom-16 right-8 z-50">
                     <a
                         href="https://github.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="fixed bottom-16 right-8 flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300 opacity-70 hover:opacity-100 hover:translate-y-[-8px] z-50"
-                        style={{ minWidth: 90, cursor: 'pointer' }}
+                        className="flex items-center gap-2 bg-gray-900 text-white px-5 py-2 rounded-xl shadow-lg transition-all duration-300 opacity-80 hover:opacity-100 hover:-translate-y-2"
+                        style={{ minWidth: 100, cursor: 'pointer' }}
                         aria-label="View on GitHub"
                     >
-                        <FaGithub size={24} />
+                        <FaGithub size={26} />
                         <span className="font-semibold text-base">GitHub</span>
                     </a>
                 </div>
+
                 {/* Footer */}
-                <footer className="w-full bg-blue-900 text-white py-1 mt-1 text-center relative">
-                    <div className="max-w-1xl mx-auto flex flex-col items-center">
-                        <span className="text-sm mt-1">© 2025 Learning Platform. All rights reserved.</span>
+                <footer className="w-full bg-blue-900 text-white py-3 mt-8 text-center">
+                    <div className="max-w-2xl mx-auto flex flex-col items-center">
+                        <span className="text-sm">© 2025 Learning Platform. All rights reserved.</span>
                     </div>
                 </footer>
             </div>
         </>
     );
 }
-
 
 export default Developer;

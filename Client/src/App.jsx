@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Assessment from "./Pages/assessment";
+import Ass from "./Pages/Ass";
 
 function App() {
   return (

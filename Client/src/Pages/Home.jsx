@@ -14,7 +14,11 @@ export default function Home() {
             "About",
             "Courses",
             <Link to="/Assessment">Assessment</Link>,
+ 
+            <Link to="/Developer">Developer Pages</Link>,
+ 
             "Developer Pages",
+ 
           ].map((item) => (
             <span
               key={item}

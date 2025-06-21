@@ -43,7 +43,7 @@ export default function Home() {
         <div className="flex gap-4">
           <Link to="/Login">
             <button className="px-5 py-2 rounded-lg font-medium bg-transparent border border-blue-400 text-blue-300 hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer">
-              Sign In
+              Log In
             </button>
           </Link>
           <Link to="/Signup">

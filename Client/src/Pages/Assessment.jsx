@@ -196,7 +196,7 @@ function Assessment(props) {
             )
           ) : (
             <>
-              <span className="text-center text-2xl font-bold text-blue-800 mb-8 tracking-wider flex items-center gap-2">
+              <span className="block text-center text-2xl font-bold text-blue-800 mb-8 tracking-wider flex items-center gap-2">
                 <svg
                   className="w-7 h-7 text-indigo-400"
                   fill="none"

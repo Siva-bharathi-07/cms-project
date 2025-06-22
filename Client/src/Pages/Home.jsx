@@ -1,76 +1,29 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-      <header className="bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 text-white py-5 px-10 flex items-center justify-between shadow-lg rounded-b-2xl">
-        <div className="text-3xl font-extrabold tracking-tight text-blue-300 drop-shadow-lg select-none">
-          Learning Platform
-        </div>
-        <nav className="flex gap-10">
-          <Link
-            to="/"
-            className="font-semibold text-lg px-3 py-1 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer"
-          >
-            Home
-          </Link>
-          <Link
-            to="/About"
-            className="font-semibold text-lg px-3 py-1 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer"
-          >
-            About
-          </Link>
-          <Link
-            to="/Courses"
-            className="font-semibold text-lg px-3 py-1 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer"
-          >
-            Courses
-          </Link>
-          <Link
-            to="/Assessment"
-            className="font-semibold text-lg px-3 py-1 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer"
-          >
-            Assessment
-          </Link>
-          <Link
-            to="/Developer"
-            className="font-semibold text-lg px-3 py-1 rounded-lg hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer"
-          >
-            Developer Pages
-          </Link>
-        </nav>
-        <div className="flex gap-4">
-          <Link to="/Login">
-            <button className="px-5 py-2 rounded-lg font-medium bg-transparent border border-blue-400 text-blue-300 hover:bg-blue-700 hover:text-white transition-all duration-200 cursor-pointer">
-              Log In
-            </button>
-          </Link>
-          <Link to="/Signup">
-            <button className="px-5 py-2 rounded-lg font-medium bg-blue-500 text-white hover:bg-blue-700 transition-all duration-200 shadow cursor-pointer">
-              Sign Up
-            </button>
-          </Link>
-        </div>
-      </header>
-      <section className="relative min-h-[60vh] flex flex-col justify-center items-center bg-gradient-to-br from-blue-50 via-white to-blue-100">
-        <div className="mt-24 text-center">
-          <h5 className="text-blue-700 font-semibold text-lg mb-2">
-            Top Rated Program <span className="text-yellow-400">4.7/5 ★</span>
-          </h5>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 drop-shadow-lg">
-            Build a <span className="text-blue-600">successful career</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-xl mx-auto mb-8">
-            Join our platform to access top courses, and real-world assessments
-            to accelerate your learning journey.
-          </p>
-          <div className="flex justify-center gap-6">
-            <Link to="/Login">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold shadow transition-all duration-200">
-                Start Learning
-              </button>
-            </Link>
+      <section className="relative min-h-[65vh] flex flex-col justify-center items-center bg-gradient-to-br from-blue-50 via-white to-blue-100">
+        <div className="flex flex-1 justify-center items-center w-full min-h-[60vh]">
+          <div className="text-center flex flex-col items-center">
+            <h5 className="text-blue-700 font-semibold text-lg mb-2">
+              Top Rated Program <span className="text-yellow-400">4.7/5 ★</span>
+            </h5>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6 drop-shadow-lg">
+              Build a <span className="text-blue-600">successful career</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-xl mx-auto mb-8">
+              Join our platform to access top courses, and real-world
+              assessments to accelerate your learning journey.
+            </p>
+            <div className="w-full flex justify-center mt-4">
+              <Link to="/Login">
+                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold shadow transition-all duration-200 cursor-pointer">
+                  Start Learning
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -79,7 +32,7 @@ export default function Home() {
             href="https://wa.me/8489148790"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg w-14 h-14 flex items-center justify-center transition-all duration-200"
+            className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg w-14 h-14 flex items-center justify-center transition-all duration-200 cursor-pointer"
             title="Chat on WhatsApp"
           >
             <svg
@@ -93,11 +46,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <footer className="fixed bottom-0 left-0 w-full bg-blue-900 text-blue-100 py-1 px-4 rounded-t-xl shadow-inner flex items-center justify-center text-xs z-40">
-        <div className="font-semibold tracking-wide text-center w-full">
-          © {new Date().getFullYear()} Learning Platform. All rights reserved.
-        </div>
-      </footer>
     </>
   );
 }

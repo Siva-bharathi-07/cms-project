@@ -2,36 +2,36 @@ import React from "react";
 
 export default function Signup() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
+    <div className="flex items-center justify-center min-h-[50vh]">
+      <div className="w-full max-w-md bg-white rounded-lg shadow-md p-4">
+        <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">
           Sign Up
         </h2>
         <form
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-3"
           onClick={(e) => e.preventDefault()}
         >
           <input
             type="text"
             placeholder="Enter your Name"
             required
-            className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <input
             type="email"
             placeholder="Enter your Email"
             required
-            className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <input
             type="password"
             placeholder="Enter your Password"
             required
-            className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
           <select
             required
-            className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Select your Department</option>
             <option value="IT Operations">IT Operations</option>
@@ -91,7 +91,7 @@ export default function Signup() {
           </select>
           <select
             required
-            className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Select your Country</option>
             <option value="Afghanistan">Afghanistan</option>
@@ -307,7 +307,7 @@ export default function Signup() {
           </select>
           <select
             required
-            className="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
           >
             <option value="">Select your Hobby</option>
             <option value="Drawing">Drawing</option>
@@ -354,7 +354,7 @@ export default function Signup() {
           </select>
           <button
             type="submit"
-            className="mt-4 bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
           >
             Register
           </button>
